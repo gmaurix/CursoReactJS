@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import {FaHospitalSymbol} from "react-icons/fa";
+import {FiShoppingCart} from "react-icons/fi";
 
 
 const NavBar=()=>{
@@ -21,8 +22,8 @@ const NavBar=()=>{
                      navbarScroll >
                      <Nav.Link href="#action1">Inicio</Nav.Link>
                      <Nav.Link href="#action2">Quienes Somos</Nav.Link>
-                     <Nav.Link href="#action2">Catalogo</Nav.Link>
-                     <Nav.Link href="#action2">Contacto</Nav.Link>
+                     <Nav.Link href="#action3">Catalogo</Nav.Link>
+                     <Nav.Link href="#action4">Contacto</Nav.Link>
                  </Nav>
                  <Form className="d-flex">
                      <FormControl
@@ -33,6 +34,7 @@ const NavBar=()=>{
                      />
                      <Button variant="primary">Buscar</Button>
                  </Form>
+                 <FiShoppingCart/>
              </Navbar.Collapse>
          </Navbar>
 </>
