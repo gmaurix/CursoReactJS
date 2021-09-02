@@ -1,0 +1,18 @@
+ul {
+    margin-top: 2em;
+    list-style-type: none;
+    justify-content: center;
+}
+
+li{
+    display: inline-block;
+    margin:0.5em;
+    
+    font-weight: bold;
+    color: grey;
+}
+li:hover{
+   color: #12129e; 
+   font-weight: bold;
+   border-bottom: 1px solid black;
+}
