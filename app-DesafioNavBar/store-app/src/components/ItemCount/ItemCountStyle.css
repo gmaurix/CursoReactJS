@@ -1,0 +1,20 @@
+.addCarrito{
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+span{
+    padding:4px 10px;
+    border: solid 1px black;
+}
+.sumres{
+    margin-bottom: 1em;
+    width: auto;
+    height: auto;
+}
+.addcart{
+    margin-left: 1em;
+    height: 2em;
+}
