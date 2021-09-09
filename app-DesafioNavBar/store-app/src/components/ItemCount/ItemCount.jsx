@@ -4,7 +4,7 @@ import './ItemCountStyle.css'
 const ItemCount = ({stock, initial, onAdd}) => {
 
     const [count, setCount] = useState(initial)
-
+    
     function sumar() {
         if (count < stock) { setCount(count + 1) }
     }
@@ -21,11 +21,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <>
             <div className='addCarrito'>
                 <div>
-                    <button className='btn-primary sumres' onClick={restar}>-</button>
+                    <button id='btnResta' className='btn-success sumres res' onClick={restar}>-</button>
                     <span>{count}</span>
-                    <button className='btn-primary sumres' onClick={sumar}>+</button>
+                    <button id='btnSuma' className='btn-success sumres sum' onClick={sumar}>+</button>
                 </div>
-                <button onClick={addCart} className='btn-primary addcart'>Add to Cart</button>
+                <button id='btnAdd' onClick={addCart} className='btn-success addcart'>Add to Cart</button>
             </div>
         </>
     )

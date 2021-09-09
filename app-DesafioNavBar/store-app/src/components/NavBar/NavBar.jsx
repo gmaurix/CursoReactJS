@@ -11,9 +11,9 @@ import "./NavBarStyle.css";
 const NavBar = () => {
     return (
         <>
-            <Navbar bg="transparent" expand="md" style={{position:'fixed',marginTop:'0, auto'}}>
+            <Navbar bg="white" expand="md" style={{position:'fixed',marginTop:'0, auto'}}>
                 <Navbar.Brand href="#">
-                    <Logo />
+                    <Logo/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">

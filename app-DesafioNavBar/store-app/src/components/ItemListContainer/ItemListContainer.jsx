@@ -1,12 +1,10 @@
-import ItemCount from '../ItemCount/ItemCount'
+import ItemList from '../ItemList/ItemList'
 import './ItemListContainerStyle.css'
 
 
 
 const ItemListContainer = (props) => {
-    const onAdd=(c)=>{
-        console.log(c)
-    }    
+     
     return (
         <>
         <div className="contenedor">                               
@@ -19,8 +17,9 @@ const ItemListContainer = (props) => {
                    <li className='nav-item'>Tortas</li>
                    <li className='nav-item'>Granel</li>
                </ul>
-        <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+        
         </div>
+        <ItemList/>
         </>
     )
 }
