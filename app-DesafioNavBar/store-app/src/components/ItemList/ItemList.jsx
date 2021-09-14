@@ -3,10 +3,12 @@ import './ItemListStyle.css'
 import Item from '../Item/Item';
  
 
-const ItemList = () => {
+const ItemList = ({productos}) => {
     return (        
         <>
-          <Item />
+        <div className='listado'>
+          {productos.map(producto =>  <Item producto={producto}/>) }
+        </div>
         </>
        
     )

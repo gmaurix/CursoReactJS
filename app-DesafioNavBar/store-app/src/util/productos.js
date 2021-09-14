@@ -120,4 +120,16 @@ const impulsivos = [
   }
 ];
 
-export default impulsivos;
+
+
+ /* ------ promise para mostrar los productos con 3 segundos de retraso ------ */
+ export const getProducts = new Promise((resolve, reject) => {
+  setTimeout(() => {
+      if (impulsivos != null) {
+          resolve(impulsivos)
+      } else {
+          reject(() => console.log('algo anda mal'))
+      }
+  }, 1500)
+})
+

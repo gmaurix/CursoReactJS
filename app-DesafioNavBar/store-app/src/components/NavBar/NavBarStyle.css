@@ -1,17 +1,29 @@
 .navbar{
-    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
     width: 100vw;
-    margin: 0 auto;
+    height: 10em;
     box-shadow: 0px 5px 10px rgb(202, 200, 200);
-     
+    
   }
   .nav-link{
     margin-left: 1em;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
   }
   .nav-link:hover{
     color: #9e0909 !important;
-   
-    
   }
+
+.menuCatalogo{
+  font-size: 0.8em;
+  display: flex;
+  flex-wrap: wrap  ;
+  height: 1em;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}

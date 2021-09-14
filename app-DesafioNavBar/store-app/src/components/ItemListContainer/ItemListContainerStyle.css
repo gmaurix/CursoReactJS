@@ -1,11 +1,12 @@
+
 .contenedor{
-    margin-top: 2em;
-    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 ul {
-    position: sticky;
-    margin-top: 2em;
     list-style-type: none;
     justify-content: center;
 }
@@ -20,4 +21,10 @@ li:hover{
    color: #12129e; 
    font-weight: bold;
    border-bottom: 2px solid #9e0909;
+}
+
+.listProductos{
+    display: flex;
+    margin-top: 5em;
+    
 }

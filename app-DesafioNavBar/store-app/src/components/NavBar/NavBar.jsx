@@ -36,7 +36,22 @@ const NavBar = () => {
                     </Form>
                     <CartWidget />
                 </Navbar.Collapse>
+                <hr />
+               <div className='menuCatalogo'>
+                    <ul>
+                        <li className='nav-item col-s-12'>Palitos</li>
+                        <li className='nav-item col-s-12'>Bombones</li>
+                        <li className='nav-item col-s-12'>Postres</li>
+                        <li className='nav-item col-s-12'>Familiares</li>
+                        <li className='nav-item col-s-12'>Tentaciones</li>
+                        <li className='nav-item col-s-12'>Tortas</li>
+                        <li className='nav-item col-s-12'>Granel</li>
+                    </ul>
+              
+                </div>
             </Navbar>
+
+            
         </>
     )
 }
