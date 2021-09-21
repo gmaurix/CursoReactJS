@@ -1,24 +1,13 @@
-.catalogo{
-    margin-top: 2em;
-    width: auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.card {
+.card-detalle{
     flex-direction: row;  
     flex-wrap: wrap;
     justify-content: space-evenly;
     height: auto;
-    margin-top: 2em;
-    margin-bottom: 1em;
     align-content: space-around;
     background: #f5f5f5;
     box-shadow: 10px 10px 10px #b1b0b0;
     width: 16em;
     gap: 1em;
-  }
-  .card-text{
-      text-align: left;
-  }
+    margin: 10em auto;
+    
+}

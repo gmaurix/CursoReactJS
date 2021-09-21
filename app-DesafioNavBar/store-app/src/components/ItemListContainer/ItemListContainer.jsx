@@ -1,8 +1,7 @@
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainerStyle.css'
 import { useEffect, useState } from 'react'
-import {getProducts} from '../../util/productos.js'
-
+import {getProducts} from '../../utils/productos.js'
 
 
 const ItemListContainer = () => {

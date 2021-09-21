@@ -6,6 +6,7 @@ import FormControl from "react-bootstrap/FormControl";
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../Logo/Logo";
 import "./NavBarStyle.css";
+import { Link } from "react-router-dom";
 
 
 const NavBar = () => {
@@ -21,8 +22,10 @@ const NavBar = () => {
                         className="mr-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                         navbarScroll >
-                        <Nav.Link href="#action1">Inicio</Nav.Link>                       
+                        <Nav.Link href="#action1">Inicio</Nav.Link>                  
+                        <Link exact to="/">     
                         <Nav.Link href="#action3">Catalogo</Nav.Link>
+                        </Link>
                         <Nav.Link href="#action4">Contacto</Nav.Link>
                     </Nav>
                     <Form className="d-flex">
@@ -34,24 +37,25 @@ const NavBar = () => {
                         />
                         <Button variant="primary">Buscar</Button>
                     </Form>
-                    <CartWidget />
+                    <Link exact to='/cart'>
+                        <CartWidget />
+                    </Link>
                 </Navbar.Collapse>
                 <hr />
                <div className='menuCatalogo'>
                     <ul>
-                        <li className='nav-item col-s-12'>Palitos</li>
-                        <li className='nav-item col-s-12'>Bombones</li>
-                        <li className='nav-item col-s-12'>Postres</li>
-                        <li className='nav-item col-s-12'>Familiares</li>
-                        <li className='nav-item col-s-12'>Tentaciones</li>
-                        <li className='nav-item col-s-12'>Tortas</li>
-                        <li className='nav-item col-s-12'>Granel</li>
-                    </ul>
-              
+                        <Link exact to='/'>
+                        <li className='nav-item'>Palitos    </li>
+                        </Link>
+                        <li className='nav-item'>Bombones   </li>
+                        <li className='nav-item'>Postres    </li>
+                        <li className='nav-item'>Familiares </li>
+                        <li className='nav-item'>Tentaciones</li>
+                        <li className='nav-item'>Tortas     </li>
+                        <li className='nav-item'>Granel     </li>
+                    </ul>              
                 </div>
-            </Navbar>
-
-            
+            </Navbar>            
         </>
     )
 }
