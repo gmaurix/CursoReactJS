@@ -4,7 +4,10 @@ import {FiShoppingCart} from "react-icons/fi";
 const CartWidget = () => {
    return (
       <>
-         <FiShoppingCart style={{marginLeft:'1em'}}/>
+         <div className="carritoSVG">
+            <FiShoppingCart style={{margineft:'1em'}}/>
+
+         </div>
       </>
 
    )

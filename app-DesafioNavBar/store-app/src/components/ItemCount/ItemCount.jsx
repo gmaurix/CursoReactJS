@@ -1,4 +1,5 @@
 import { useState } from "react"
+import CartWidget from "../CartWidget/CartWidget"
 
 import './ItemCountStyle.css'
 

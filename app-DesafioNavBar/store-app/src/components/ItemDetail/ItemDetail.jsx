@@ -1,6 +1,7 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetailStyle.css';
+import Zoom from 'react-reveal/Zoom';
 
 const ItemDetail = ({ producto }) => {    
     const onAdd = (c) => {
@@ -8,8 +9,9 @@ const ItemDetail = ({ producto }) => {
     }
     return (
       <>
+      <Zoom top>
         <div className='card-detalle '>
-            <img src={producto.img} className="card-img-top" alt="foto producto" loading="lazy" />
+            <img src={producto.img} className="card-img-top" alt={`Foto de ${producto.descricpion}`} loading="lazy" />
             <div className="card-body">
                 <h3 className="card-title"> {producto.descricpion}</h3>
                 <p className="card-text" >{producto.detalle}</p>
@@ -18,6 +20,7 @@ const ItemDetail = ({ producto }) => {
                 <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} />
             </div>
         </div>
+      </Zoom>
     </>
 
     )

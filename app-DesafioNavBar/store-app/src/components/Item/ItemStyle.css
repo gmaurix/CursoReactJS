@@ -1,9 +1,21 @@
-.catalogo{
-    margin-top: 2em;
-    width: auto;
+.contenedor{
+    width: 80vw;
     display: flex;
     justify-content: space-evenly;
+    margin: 0 auto;
+    gap: 2em;
+    
+}
+
+.catalogo{
+    margin-top: 0.5em;
+    margin-left: 2em;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    
 }
 
 .card {
@@ -20,5 +32,9 @@
     gap: 1em;
   }
   .card-text{
-      text-align: left;
+      text-align: center;
+      font-weight:bold;
+  }
+  .card-title{
+      text-size-adjust: auto;
   }
