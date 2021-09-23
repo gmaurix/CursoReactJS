@@ -2,12 +2,16 @@
     flex-direction: row;  
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: auto;
+    height: 32em;
     align-content: space-around;
     background: #f5f5f5;
     box-shadow: 10px 10px 10px #cac8c8;
     width: 20em;
     gap: 1em;
-    margin: 5em auto;
+    margin: 4em auto;
     
+}
+.card-detalle img{
+    width: 14em;
+    height: 14em;
 }

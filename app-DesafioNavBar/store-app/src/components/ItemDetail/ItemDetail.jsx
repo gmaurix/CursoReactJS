@@ -1,12 +1,19 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetailStyle.css';
+import { useState } from "react";
 import Zoom from 'react-reveal/Zoom';
 
 const ItemDetail = ({ producto }) => {    
-    const onAdd = (c) => {
-        console.log(c)
+    
+  const [cantidad, setCantidad]=useState(0)
+  
+  
+  
+  const onAdd = (c) => {
+        setCantidad(c)
     }
+
     return (
       <>
       <Zoom top>

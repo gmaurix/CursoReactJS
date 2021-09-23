@@ -16,4 +16,6 @@ span{
 .addcart{
     margin-left: 1em;
     height: 2em;
+    margin-top: 0.5em;
+    align-items: center;
 }

@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({});
+    const [loading, setLoading]=useState(true);
     const {id}=useParams();
     console.log(id)
 
@@ -14,14 +15,18 @@ const ItemDetailContainer = () => {
         if(id){
             getUnicProd
                 .then((resp) => setProducto(resp.find(pd => pd.id===parseInt(id)) ) )      
-        }else{
-            
-        }
+                .catch((error) => console.log(error))
+                .finally(()=>setLoading(false))
+
+            }
     }, [id])
 
     return (
         <>
-            <ItemDetail producto={producto}/>
+        <div >
+            <br />
+          {loading ? <h2 styles="top:5em"  >Cargando...</h2>:<ItemDetail producto={producto}/>}
+        </div>
         </>
     )
 
