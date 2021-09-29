@@ -8,6 +8,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial)
     const [changeBoton, setchangeBoton] = useState(true);
 
+
+
     function sumar() {
         if (count < stock) { setCount(count + 1) }
     }
@@ -16,7 +18,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             setCount(count - 1)
         }
     }
-    const addCart = () => {
+    const addCart = ({producto}) => {
         onAdd(count)
         setchangeBoton(false)
     }

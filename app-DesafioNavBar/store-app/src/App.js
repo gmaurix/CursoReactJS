@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Cart from "./components/Cart/Cart";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-//import CartContextProvider from "./context/cartContext";
+import CartContextProvider from "./context/cartContext";
 
 const Titulo = (props) => {
   return <h2>{props.title}</h2>;
@@ -13,7 +13,8 @@ const Titulo = (props) => {
 
 function App() {
   return (
-    <Router>
+
+  <Router>
       <div className="App">
         <header className="App-header">
           <Titulo />
