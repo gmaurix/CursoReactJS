@@ -7,40 +7,39 @@ import Cart from "./components/Cart/Cart";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CartContextProvider from "./context/cartContext";
 
-const Titulo = (props) => {
-  return <h2>{props.title}</h2>;
-};
-
 function App() {
   return (
-
-  <Router>
-      <div className="App">
-        <header className="App-header">
-          <Titulo />
-          <NavBar />
-        </header>
-        <Switch>
-          <section>
-            <Route exact path="/">
-              <ItemListContainer />
-            </Route>
-            <Route
-              path="/categoria/:idcategoria"
-              component={ItemListContainer}
-            />
-            <Route exact path="/itemList">
-              <ItemListContainer />
-            </Route>
-            <Route exact path="/itemDetail/:id">
-              <ItemDetailContainer />
-            </Route>
-            <Route exact path="/cart" component={Cart} />
-          </section>
-        </Switch>
-      </div>
-    </Router>
+    
+    <CartContextProvider>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <NavBar />
+          </header>
+          <Switch>
+            <section>
+              <Route exact path="/">
+                <ItemListContainer />
+              </Route>
+              <Route
+                path="/categoria/:idcategoria"
+                component={ItemListContainer}
+              />
+              <Route exact path="/itemList">
+                <ItemListContainer />
+              </Route>
+              <Route exact path="/itemDetail/:id">
+                <ItemDetailContainer />
+              </Route>
+              <Route exact path="/cart" component={Cart} />
+            </section>
+          </Switch>
+        </div>
+      </Router>
+    </CartContextProvider>
   );
 }
+
 /* render(<App/>,document.getElementById('root')); */
+
 export default App;

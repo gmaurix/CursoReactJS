@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import './ItemStyle.css';
-import ItemCount from '../ItemCount/ItemCount';
+
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 //import { useState, useEffect } from 'react';
 
 const Item = ({producto}) => {
-  /*    const onAdd = (c) => {
-        console.log(c)
-    } */
+ 
     return (
         <>
             <div className='catalogo'>
@@ -22,7 +20,7 @@ const Item = ({producto}) => {
                             <button className="btn btn-primary" id="comprar" >Ver Detalle</button>
                            </Link>
                         </div>
-                      {/*   <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} /> */}
+                      
                     </div>
                 </Zoom>
             </div>

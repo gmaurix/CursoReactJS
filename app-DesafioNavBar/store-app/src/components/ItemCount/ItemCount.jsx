@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CartWidget from "../CartWidget/CartWidget";
+//import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import './ItemCountStyle.css'
 
@@ -18,7 +18,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
             setCount(count - 1)
         }
     }
-    const addCart = ({producto}) => {
+    const addCart = () => {
         onAdd(count)
         setchangeBoton(false)
     }

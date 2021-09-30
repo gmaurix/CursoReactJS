@@ -32,7 +32,6 @@ const impulsivos = [
     categoria: "Bombones",
     descricpion: "Bombon Vainilla Split",
     detalle: "Crema helada",
-    detalle: "Crema helada",
     Precio: 340,
     img: "../img/bombonvainilla.png",
     stock: 10,
