@@ -3,21 +3,22 @@ import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetailStyle.css';
 //import { useState } from "react";
 import Zoom from 'react-reveal/Zoom';
-import {useCartContext } from "../../context/cartContext";
+import { useContext } from "react";
+import { cartContext } from "../../context/cartContext";
 
 
 const ItemDetail = ({ producto }) => {    
 
-  const { agregarCarrito } = useCartContext()
+  const { cartList, agregarCarrito } = useContext(cartContext)
 
-  //const myContext = useContext(cartContext)
+  console.log(cartList)
 
   console.log(agregarCarrito)
-  
+
   const onAdd = (c) => {
 
-      agregarCarrito({producto, c})
-    }
+    agregarCarrito({ producto, c })
+  }
 
     return (
       <>

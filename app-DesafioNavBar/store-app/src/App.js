@@ -9,7 +9,6 @@ import CartContextProvider from "./context/cartContext";
 
 function App() {
   return (
-    
     <CartContextProvider>
       <Router>
         <div className="App">

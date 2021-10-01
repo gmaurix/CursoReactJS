@@ -5,20 +5,18 @@ export const cartContext = createContext([]);
 export const useCartContext = () => useContext(cartContext);
 
 export default function CartContextProvider({ children }) {
-
   const [cartList, setcartList] = useState([]);
-  
+
   function agregarCarrito(producto, cantidad) {
-    
     const index = cartList.findIndex((x) => x.id === producto.id);
-   
+
     if (index > -1) {
-          const anteriorC = cartList[index].cantidad;
-          cartList.splice(index, 1);
-          setcartList([...cartList, { producto, cantidad: cantidad + anteriorC }]);
+      const anteriorC = cartList[index].cantidad;
+      cartList.splice(index, 1);
+      setcartList([...cartList, { producto, cantidad: cantidad + anteriorC }]);
     } else {
-          setcartList([...cartList, { producto, cantidad }]);
-    } 
+      setcartList([...cartList, { producto, cantidad }]);
+    }
   }
 
   function borrarCarrito() {
@@ -26,8 +24,8 @@ export default function CartContextProvider({ children }) {
   }
 
   return (
-    <CartContextProvider value={{ cartList, agregarCarrito, borrarCarrito }}>
+    <cartContext.Provider value={{ cartList, agregarCarrito, borrarCarrito }}>
       {children}
-    </CartContextProvider>
+    </cartContext.Provider>
   );
 }
