@@ -1,0 +1,28 @@
+
+.p-cart{
+    margin-top: 3em;
+}
+.list-carrito{
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+}
+tr:nth-child(even) {
+    background-color: rgba(150, 177, 212, 0.4);
+    width: 15em;
+    height: auto;
+  }  
+th:nth-child(even),td:nth-child(even) {
+    background-color: rgba(150, 177, 212, 0.4);
+    width: 15em;
+    height: auto;
+  }
+.figure-img{
+    height: 5em;
+    width: 5em;
+}
+.btn{
+    height: 2em;
+}
+
+

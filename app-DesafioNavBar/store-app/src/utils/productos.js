@@ -2,7 +2,7 @@ const impulsivos = [
   {
     id: 1,
     categoria: "Bombones",
-    descricpion: "Bombon Escoces",
+    descripcion: "Bombon Escoces",
     detalle:
       "Crema helada de chocolate y crema americana, con corazón de dulce de leche repostero, cubierto con baño de repostería y crocante de maní.",
     Precio: 430,
@@ -12,7 +12,7 @@ const impulsivos = [
   {
     id: 2,
     categoria: "Bombones",
-    descricpion: "Bombon Crocante",
+    descripcion: "Bombon Crocante",
     detalle: "Crema helada",
     Precio: 340,
     img: "../img/bomboncrocantesolo.png",
@@ -21,7 +21,7 @@ const impulsivos = [
   {
     id: 3,
     categoria: "Bombones",
-    descricpion: "Bombon Suizo",
+    descripcion: "Bombon Suizo",
     detalle: "Crema helada",
     Precio: 380,
     img: "../img/bombom_suizo_caja.jpeg",
@@ -30,7 +30,7 @@ const impulsivos = [
   {
     id: 4,
     categoria: "Bombones",
-    descricpion: "Bombon Vainilla Split",
+    descripcion: "Bombon Vainilla Split",
     detalle: "Crema helada",
     Precio: 340,
     img: "../img/bombonvainilla.png",
@@ -39,7 +39,7 @@ const impulsivos = [
   {
     id: 5,
     categoria: "Postres",
-    descricpion: "Cassata",
+    descripcion: "Cassata",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/casatta.png",
@@ -48,7 +48,7 @@ const impulsivos = [
   {
     id: 6,
     categoria: "Postres",
-    descricpion: "Almendrado",
+    descripcion: "Almendrado",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/almendrado.png",
@@ -57,7 +57,7 @@ const impulsivos = [
   {
     id: 7,
     categoria: "Postres",
-    descricpion: "Delicia",
+    descripcion: "Delicia",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/delicia.png",
@@ -66,7 +66,7 @@ const impulsivos = [
   {
     id: 8,
     categoria: "Postres",
-    descricpion: "Crocantino",
+    descripcion: "Crocantino",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/crocantino.png",
@@ -75,7 +75,7 @@ const impulsivos = [
   {
     id: 9,
     categoria: "Palitos",
-    descricpion: "Palito Bombon",
+    descripcion: "Palito Bombon",
     detalle: "Crema helada",
     Precio: 500,
     img: "../img/palito_bombon.jpeg",
@@ -84,7 +84,7 @@ const impulsivos = [
   {
     id: 10,
     categoria: "Palitos",
-    descricpion: "Palito Frutal Frutilla",
+    descripcion: "Palito Frutal Frutilla",
     detalle: "Crema helada",
     Precio: 300,
     img: "../img/palito_frutal_frutilla.png",
@@ -93,7 +93,7 @@ const impulsivos = [
   {
     id: 11,
     categoria: "Palitos",
-    descricpion: "Palito Frutal Limon",
+    descripcion: "Palito Frutal Limon",
     detalle: "Crema helada",
     Precio: 300,
     img: "../img/palitolimon.png",
@@ -102,7 +102,7 @@ const impulsivos = [
   {
     id: 12,
     categoria: "Palitos",
-    descricpion: "Palito Frutal Naranja",
+    descripcion: "Palito Frutal Naranja",
     detalle: "Crema helada",
     Precio: 300,
     img: "../img/palitonaranja.png",
@@ -111,7 +111,7 @@ const impulsivos = [
   {
     id: 13,
     categoria: "Palitos",
-    descricpion: "Palito Pico Dulce",
+    descripcion: "Palito Pico Dulce",
     detalle: "Crema helada",
     Precio: 300,
     img: "../img/picodulce__1.png",
@@ -120,7 +120,7 @@ const impulsivos = [
   {
     id: 14,
     categoria: "Tortas",
-    descricpion: "Torta Grido",
+    descripcion: "Torta Grido",
     detalle: "Crema helada",
     Precio: 580,
     img: "../img/torta_grido.png",
@@ -129,7 +129,7 @@ const impulsivos = [
   {
     id: 15,
     categoria: "Tortas",
-    descricpion: "Torta Milka",
+    descripcion: "Torta Milka",
     detalle: "Crema helada",
     Precio: 580,
     img: "../img/torta_milka.jpg",
@@ -138,7 +138,7 @@ const impulsivos = [
   {
     id: 16,
     categoria: "Tortas",
-    descricpion: "Torta Oreo",
+    descripcion: "Torta Oreo",
     detalle: "Crema helada",
     Precio: 580,
     img: "../img/torta_oreo.png",
@@ -147,7 +147,7 @@ const impulsivos = [
   {
     id: 17,
     categoria: "Familiar",
-    descricpion: "Familiar Nº1",
+    descripcion: "Familiar Nº1",
     detalle: "Crema helada",
     Precio: 580,
     img: "../img/familiar_n1.png",
@@ -156,7 +156,7 @@ const impulsivos = [
   {
     id: 18,
     categoria: "Familiar",
-    descricpion: "Familiar Nº2",
+    descripcion: "Familiar Nº2",
     detalle: "Crema helada",
     Precio: 580,
     img: "../img/familiar_n2.png",
@@ -165,7 +165,7 @@ const impulsivos = [
   {
     id: 19,
     categoria: "Familiar",
-    descricpion: "Familiar Nº3",
+    descripcion: "Familiar Nº3",
     detalle: "Crema helada",
     Precio: 580,
     img: "../img/familiar_n3.png",
@@ -174,7 +174,7 @@ const impulsivos = [
   {
     id: 20,
     categoria: "Familiar",
-    descricpion: "Familiar Nº4",
+    descripcion: "Familiar Nº4",
     detalle: "Crema helada",
     Precio: 580,
     img: "../img/familiar_n4.png",
@@ -183,7 +183,7 @@ const impulsivos = [
   {
     id: 21,
     categoria: "Tentaciones",
-    descricpion: "Tentación Granizado",
+    descripcion: "Tentación Granizado",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentaciongranizado.png",
@@ -192,7 +192,7 @@ const impulsivos = [
   {
     id: 22,
     categoria: "Tentaciones",
-    descricpion: "Tentación Chocolate",
+    descripcion: "Tentación Chocolate",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentacionchocolate.png",
@@ -201,7 +201,7 @@ const impulsivos = [
   {
     id: 23,
     categoria: "Tentaciones",
-    descricpion: "Tentación Crema Coockie",
+    descripcion: "Tentación Crema Coockie",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentacioncremacookie_1.png",
@@ -210,7 +210,7 @@ const impulsivos = [
   {
     id: 24,
     categoria: "Tentaciones",
-    descricpion: "Tentación Crema Americana",
+    descripcion: "Tentación Crema Americana",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentacionamericanna.png",
@@ -219,7 +219,7 @@ const impulsivos = [
   {
     id: 25,
     categoria: "Tentaciones",
-    descricpion: "Tentación Dulce de Leche",
+    descripcion: "Tentación Dulce de Leche",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentacionddl.png",
@@ -228,7 +228,7 @@ const impulsivos = [
   {
     id: 26,
     categoria: "Tentaciones",
-    descricpion: "Tentación Frutilla",
+    descripcion: "Tentación Frutilla",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentacion_frutilla.png",
@@ -237,7 +237,7 @@ const impulsivos = [
   {
     id: 27,
     categoria: "Tentaciones",
-    descricpion: "Tentación Mascarpone",
+    descripcion: "Tentación Mascarpone",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentacion_mascarpone.png",
@@ -246,7 +246,7 @@ const impulsivos = [
   {
     id: 28,
     categoria: "Tentaciones",
-    descricpion: "Tentación Limón",
+    descripcion: "Tentación Limón",
     detalle: "Crema helada",
     Precio: 270,
     img: "../img/tentacio_limon.png",
