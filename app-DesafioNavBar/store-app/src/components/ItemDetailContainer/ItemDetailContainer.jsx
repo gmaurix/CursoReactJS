@@ -4,7 +4,6 @@ import { getFirestore } from "../../services/getFirebase";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 
-
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({});
     const [loading, setLoading]=useState(true);
@@ -15,12 +14,11 @@ const ItemDetailContainer = () => {
         if(id){
             db.collection('productos').get()
                 .then((resp) => {
-                    let pd=resp.docs.map(producto =>({id:producto.id, ...producto.data()}) )
+                    let pd=resp.docs.map(producto =>({id:producto.id, ...producto.data()}) )                    
                     setProducto(pd.find(pd => pd.id===id))
                 })      
                 .catch((error) => console.log(error))
                 .finally(()=>setLoading(false))
-
             }
     }, [id])
 
@@ -32,6 +30,5 @@ const ItemDetailContainer = () => {
         </div>
         </>
     )
-
 }
 export default ItemDetailContainer

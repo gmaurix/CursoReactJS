@@ -1,5 +1,4 @@
 import { useState } from "react";
-//import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import './ItemCountStyle.css'
 
@@ -7,8 +6,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     const [count, setCount] = useState(initial)
     const [changeBoton, setchangeBoton] = useState(true);
-
-
 
     function sumar() {
         if (count < stock) { setCount(count + 1) }

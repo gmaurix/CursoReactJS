@@ -1,7 +1,6 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetailStyle.css';
-//import { useState } from "react";
 import Zoom from 'react-reveal/Zoom';
 import { useContext } from "react";
 import { cartContext } from "../../context/cartContext";

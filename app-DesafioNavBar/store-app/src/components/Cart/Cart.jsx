@@ -4,9 +4,9 @@ import { useContext } from 'react';
 
 const Cart=()=>{
 
-   const {cartList} = useContext(cartContext)
-   const {calcularTotal} = useContext(cartContext)
-    
+   const {cartList,quitarProducto,calcularTotal} = useContext(cartContext)
+   
+       
     return(
         <>
             <h2 className='p-cart'>Carrito de Compras</h2>
@@ -21,14 +21,16 @@ const Cart=()=>{
                         <th></th>
                     </tr>
                     {cartList.map(({ producto, cantidad }) =>
+                        
                         <tr>
-                            <td><img className="figure-img" src={producto.img} alt={`Foto de ${producto.descripcion}`} loading="lazy" />                       </td>
+                            <td key={producto.id}><img className="figure-img" src={producto.img} alt={`Foto de ${producto.descripcion}`} loading="lazy" />                       </td>
                             <td>{producto.descripcion} </td>
                             <td>{cantidad} </td>
                             <td>{producto.Precio} </td>
                             <td>{producto.Precio * cantidad} </td>
-                            <td><button className="btn btn-danger">x</button></td>
+                            <td><button className="btn btn-danger" onClick={()=>quitarProducto(producto)} >x</button></td>
                         </tr>
+                        
                     )}                    
                     <tr>
                         <td></td>

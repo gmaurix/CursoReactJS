@@ -1,7 +1,6 @@
 import React from 'react';
 import './ItemListStyle.css'
-import Item from '../Item/Item';
- 
+import Item from '../Item/Item'; 
 
 const ItemList = ({productos}) => {
     return (        

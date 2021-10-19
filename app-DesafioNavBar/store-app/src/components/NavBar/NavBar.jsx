@@ -1,13 +1,9 @@
 import Navbar from "react-bootstrap/Navbar";
-//import Button from "react-bootstrap/Button";
 import Nav from "react-bootstrap/Nav";
-//import Form from "react-bootstrap/Form";
-//import FormControl from "react-bootstrap/FormControl";
 import CartWidget from "../CartWidget/CartWidget";
 import Logo from "../Logo/Logo";
 import "./NavBarStyle.css";
 import { Link } from "react-router-dom";
-
 
 const NavBar = () => {
     return (

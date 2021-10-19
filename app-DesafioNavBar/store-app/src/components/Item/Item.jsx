@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import './ItemStyle.css';
-
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
-//import { useState, useEffect } from 'react';
+
 
 const Item = ({producto}) => {
  
