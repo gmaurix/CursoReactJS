@@ -8,7 +8,7 @@ import { cartContext } from "../../context/cartContext";
 
 const ItemDetail = ({ producto }) => {    
 
-  const { cartList, agregarCarrito } = useContext(cartContext)
+  const { agregarCarrito } = useContext(cartContext)
 
   const onAdd = (c) => {
     agregarCarrito({ producto:producto, cantidad:c })

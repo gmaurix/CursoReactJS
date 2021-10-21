@@ -1,19 +1,11 @@
 import {FiShoppingCart} from "react-icons/fi";
 import './CartWidgetStyles.css'
-import { cartContext, useCartContext } from "../../context/cartContext";
+import { cartContext } from "../../context/cartContext";
 import { useContext } from "react";
-
-
 
  const CartWidget = () => {
  const {indicadorCarrito}=useContext(cartContext)
- const comprobar=()=>{
-    if(indicadorCarrito<=0){
-       console.los('ocultar')
-    }else{
-      console.los('mostrar')
-    }
- }
+ 
    return (
       <>
          <div className="carritoSVG">
@@ -21,7 +13,6 @@ import { useContext } from "react";
             <span id='cantidad'>{indicadorCarrito()}</span>
          </div>
       </>
-
    )
 }
 

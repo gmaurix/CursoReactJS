@@ -24,15 +24,17 @@ export default function CartContextProvider({ children }) {
     const quitarProd = cartList.filter((p) => p.producto.id !== producto.id);
     setcartList([...quitarProd]);
   }
+  
   const indicadorCarrito = () => {
     return cartList.reduce((ac, producto) => ac + producto.cantidad, 0);
   };
 
   function calcularTotal() {
     let total = 0;
-    cartList.forEach(({ producto }) => {
-      total += producto.Precio * producto.cantidad;
+    cartList.forEach(({ producto, cantidad }) => {
+      total += producto.Precio * cantidad;
     });
+    return total;
   }
 
   return (

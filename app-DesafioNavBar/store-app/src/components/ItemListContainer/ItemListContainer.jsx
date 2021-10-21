@@ -1,7 +1,8 @@
+
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainerStyle.css';
 import {useParams} from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { getFirestore } from '../../services/getFirebase';
 
 const ItemListContainer = () => {
@@ -11,6 +12,7 @@ const [loading, setLoading]=useState(true);
 const {idcategoria}=useParams();
 
 useEffect(()=>{
+    setLoading(true)
     const db=getFirestore()
     const coleccion=db.collection('productos')
     if(idcategoria){
@@ -18,7 +20,6 @@ useEffect(()=>{
         .then(resp => {            
             let pd=resp.docs.map(producto =>({id:producto.id, ...producto.data()}) )
             setproductos(pd.filter(productos => productos.categoria === idcategoria))
-
         })
         .catch(err=>console.log(err))
         .finally(()=>setLoading(false))
@@ -44,4 +45,5 @@ useEffect(()=>{
     )
 }
 
-export default ItemListContainer;
+//export default ItemListContainer;
+export default memo( ItemListContainer);
