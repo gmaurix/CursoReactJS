@@ -17,14 +17,14 @@ export default function CartContextProvider({ children }) {
   }
 
   function borrarCarrito() {
-    cartList([]);
+    setcartList([]);
   }
 
   function quitarProducto(producto) {
     const quitarProd = cartList.filter((p) => p.producto.id !== producto.id);
     setcartList([...quitarProd]);
   }
-  
+
   const indicadorCarrito = () => {
     return cartList.reduce((ac, producto) => ac + producto.cantidad, 0);
   };

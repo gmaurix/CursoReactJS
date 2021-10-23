@@ -1,31 +1,30 @@
 import './cartStyle.css'
 import { cartContext } from '../../context/cartContext';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
+import { useCartContext } from '../../context/cartContext';
 import { getFirestore } from '../../services/getFirebase';
 import firebase from 'firebase';
 import 'firebase/firestore';
 import Bounce from 'react-reveal/Bounce';
+import Slide from 'react-reveal/Slide';
+import Shake from 'react-reveal/Shake';
 import { Link } from "react-router-dom";
-
-
-
 
 const Cart=()=>{
     
+    const {cartList,quitarProducto,calcularTotal,borrarCarrito} = useCartContext()
     const [formData, setFormData]=useState({
         nombre:'',
         telefono:'',
         mail:''
     })
     
-    const {cartList,quitarProducto,calcularTotal, borrarCarrito} = useContext(cartContext)
-    
     function handleChange(e){
      setFormData({
         ...formData,[e.target.name]:e.target.value
         })
     }
-    console.log(formData)
+    
     function handleSubmit(e){
         e.preventDefault()
         console.log('enviadno')
@@ -33,44 +32,59 @@ const Cart=()=>{
 
     const generarOrder=()=>{
         const db=getFirestore()
-        const od=db.collection('ordenes')
+        const ord=db.collection('ordenes')
         let orden={}    
+
         orden.date=firebase.firestore.Timestamp.fromDate(new Date());
-        orden.buyer={nombre:'bondiu', telefono:'1213432', mail:'bondiu@mail.com'}
+        
+        orden.buyer=formData
+        
         orden.total=calcularTotal();
-        orden.Items=cartList.map(itemCart =>{
-            const id=itemCart.id;
-            const produc=itemCart.descripcion;
-            const price=itemCart.Precio;
+        
+        orden.producto=cartList.map(producto =>{
+            const id=producto.producto.id;
+            const produc=producto.producto.descripcion;
+            const price=producto.producto.Precio;
             return{id,produc,price}
         })
-        od.add(orden)
+        
+        ord.add(orden)
         .then(idDoc =>(
-            console.log(idDoc.id)
+            alert(`Orden: ${idDoc.id}
+            Generada con exito`)
         ))
         .catch(err =>(
             console.log(err)
         ))
-        .finally()
-    }
-      
+        .finally(() =>
+         setFormData({
+                nombre: '',
+                telefono: '',
+                mail: ''
+            }),
+            borrarCarrito()
+        )
+    }      
 
     return(
-       <>
-            
+       <>            
            {cartList.length === 0 ?
-           <div>
-            <h2 className='p-cart'>Carrito de Compras vacío</h2>
-            <h2>No hay productos cargadados</h2>
-            <Link to='/' className="btn btn-primary">Ver Catalogo</Link>
-           </div>
+           <Shake>
+            <div>
+                <h2 className='p-cart text-danger'>El Carrito está vacío</h2>
+                <h3 className="text-primary">No hay productos cargados</h3>
+                <Link to='/' className="btn btn-primary btn_vcta" >Hacé tu Compra!</Link>
+            </div>
+           </Shake>
            :
-           <div><h2 className='p-cart'>Carrito de Compras</h2>
-            <div className="contenedor" >
-                
-                <div className="list-carrito" >
+           <div>
+               <Slide top>
+                    <h2 className='p-cart text-primary text-decoration-underline'>Carrito de Compras</h2>
+               </Slide>
+            <div className="contenedor" >                
+            <div className="list-carrito" >
                 <Bounce left>
-                    <table>
+                    <table className="mb-5">
                         <tr>
                             <th>Foto</th>
                             <th>Descripcion</th>
@@ -94,26 +108,29 @@ const Cart=()=>{
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td>Total</td>
-                            <td> $ {calcularTotal()}</td>
+                            <td className="fw-bold">Total</td>
+                            <td className="fw-bold"> $ {calcularTotal()}</td>
                             <td><button className="btn btn-danger" onClick={()=>borrarCarrito()}>Vaciar Carrito</button></td>
                         </tr>
                     </table>             
                     </Bounce>   
-                </div>
+             </div>
                 <Bounce right>
                     <div id="formOrders">
                         <form onChange={handleChange} onSubmit={handleSubmit}>
-                            <input type="text" placeholder="Nombre" name="nombre"/>
-                            <input type="text" placeholder="Telefono" name="telefono" />
-                            <input type="text" placeholder="Mail" name="mail" />
+                            <label className="text-decoration-underline fw-bold">Confirmar Compra</label>
+                            <input type="text" placeholder="Nombre" name="nombre" value={FormData.nombre}/>
+                            <input type="text" placeholder="Telefono" name="telefono" value={FormData.telefono} />                            
+                            <input type="text" placeholder="Mail" name="mail" value={FormData.mail}/>
+                            <input type="text" placeholder="Reingresar Mail" name="mail2" value={FormData.mail2}/>
+                            <label className="fw-bold mt-3">Importe de la Compra: ${calcularTotal()}</label>
                             <button className="orden btn btn-primary" onClick={generarOrder}>Generar Orden</button>
+                            
                         </form>
                     </div>
                 </Bounce>
             </div> 
-            </div>
-            }          
+        </div> }          
        </> 
     
     )

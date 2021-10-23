@@ -25,7 +25,10 @@ input{
     text-align: center;
     
 }
-
+.btn_vcta{
+    color: white !important;
+    margin: 0 1em;
+}
 .p-cart{
     margin-top: 3em;
 }

@@ -19,7 +19,7 @@ useEffect(()=>{
         coleccion.get()
         .then(resp => {            
             let pd=resp.docs.map(producto =>({id:producto.id, ...producto.data()}) )
-            setproductos(pd.filter(productos => productos.categoria === idcategoria))
+            setproductos(pd.filter(productos => productos.categoria === idcategoria).sort(function(a, b){return a.Precio - b.Precio}))
         })
         .catch(err=>console.log(err))
         .finally(()=>setLoading(false))
