@@ -39,17 +39,17 @@ const NavBar = () => {
                 </Navbar.Collapse>               
                     <div className='menuCatalogo d-flex flex-md-wrap flex-md-column'>
                         <ul>
-                            <Link exact to='/categoria/Palitos'> 
-                                <li className='nav-item'>Palitos    </li>
-                            </Link>
                             <Link exact to='/categoria/Bombones'>
                                 <li className='nav-item'>Bombones   </li>
                             </Link> 
-                            <Link exact to='/categoria/Postres'>
-                                <li className='nav-item'>Postres    </li>
-                            </Link>
                             <Link exact to='/categoria/Familiar'>
                                 <li className='nav-item'>Familiares </li>
+                            </Link>
+                            <Link exact to='/categoria/Palitos'> 
+                                <li className='nav-item'>Palitos    </li>
+                            </Link>
+                            <Link exact to='/categoria/Postres'>
+                                <li className='nav-item'>Postres    </li>
                             </Link>
                             <Link exact to='/categoria/Tentaciones'>
                                 <li className='nav-item'>Tentaciones</li>

@@ -11,6 +11,7 @@ import { useContext } from "react";
          <div className="carritoSVG">
             <FiShoppingCart style={{margineft:'1em'}}/>
             <span id='cantidad'>{indicadorCarrito()}</span>
+            
          </div>
       </>
    )

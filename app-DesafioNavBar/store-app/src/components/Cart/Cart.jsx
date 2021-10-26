@@ -1,5 +1,5 @@
 import './cartStyle.css'
-import { cartContext } from '../../context/cartContext';
+import {FaRegTrashAlt} from "react-icons/fa"
 import { useState } from 'react';
 import { useCartContext } from '../../context/cartContext';
 import { getFirestore } from '../../services/getFirebase';
@@ -16,9 +16,17 @@ const Cart=()=>{
     const [formData, setFormData]=useState({
         nombre:'',
         telefono:'',
-        mail:''
+        mail:'',
+        mail2:''
     })
-    
+    function validarMail(e){      
+        if(formData.mail === formData.mail2){
+            console.log('son iguales')
+        }else{
+            console.log('No son iguales')
+        }
+    }
+
     function handleChange(e){
      setFormData({
         ...formData,[e.target.name]:e.target.value
@@ -27,7 +35,8 @@ const Cart=()=>{
     
     function handleSubmit(e){
         e.preventDefault()
-        console.log('enviadno')
+        generarOrder()
+        
     }
 
     const generarOrder=()=>{
@@ -79,7 +88,7 @@ const Cart=()=>{
            :
            <div>
                <Slide top>
-                    <h2 className='p-cart text-primary text-decoration-underline'>Carrito de Compras</h2>
+                    <h2 className='p-cart fw-bold'>CARRITO DE COMPRAS</h2>
                </Slide>
             <div className="contenedor" >                
             <div className="list-carrito" >
@@ -101,7 +110,7 @@ const Cart=()=>{
                                 <td>{cantidad} </td>
                                 <td>{producto.Precio} </td>
                                 <td>{producto.Precio * cantidad} </td>
-                                <td><button className="btn btn-danger" onClick={()=>quitarProducto(producto)} >x</button></td>                            
+                                <td><button className="btn btn-dark btn_quitar" onClick={()=>quitarProducto(producto)} ><FaRegTrashAlt/></button></td>                            
                             </tr>                        
                         )}             
                         <tr>
@@ -110,7 +119,7 @@ const Cart=()=>{
                             <td></td>
                             <td className="fw-bold">Total</td>
                             <td className="fw-bold"> $ {calcularTotal()}</td>
-                            <td><button className="btn btn-danger" onClick={()=>borrarCarrito()}>Vaciar Carrito</button></td>
+                            <td><button className="btn btn-dark btn_quitar" onClick={()=>borrarCarrito()}><FaRegTrashAlt/> Borrar Carrito</button></td>
                         </tr>
                     </table>             
                     </Bounce>   
@@ -118,14 +127,17 @@ const Cart=()=>{
                 <Bounce right>
                     <div id="formOrders">
                         <form onChange={handleChange} onSubmit={handleSubmit}>
-                            <label className="text-decoration-underline fw-bold">Confirmar Compra</label>
-                            <input type="text" placeholder="Nombre" name="nombre" value={FormData.nombre}/>
-                            <input type="text" placeholder="Telefono" name="telefono" value={FormData.telefono} />                            
-                            <input type="text" placeholder="Mail" name="mail" value={FormData.mail}/>
-                            <input type="text" placeholder="Reingresar Mail" name="mail2" value={FormData.mail2}/>
-                            <label className="fw-bold mt-3">Importe de la Compra: ${calcularTotal()}</label>
-                            <button className="orden btn btn-primary" onClick={generarOrder}>Generar Orden</button>
-                            
+                            <label className="text-primary fw-bold">CONFIRMACION DE COMPRA</label>
+                            <input type="text" required placeholder="Ingresar Nombre" name="nombre" value={FormData.nombre}/>
+                            <input type="text" required placeholder="Ingresar Telefono" name="telefono" value={FormData.telefono} />
+                            <input type="text" required placeholder="Ingresar Mail" name="mail" value={FormData.mail}/>
+                            <input type="text" required placeholder="Reingresar Mail" name="mail2" value={FormData.mail2} onBlur={validarMail()}/>
+                            <label className="fw-bold mt-3 text-primary">Importe a Pagar: ${calcularTotal()}</label>
+                            {formData.mail !== formData.mail2 || formData.mail=='' ? 
+                            <button className="orden btn btn-dark" disabled="true"  name='btn_orden' >Generar Orden</button>
+                            :
+                            <button className="orden btn btn-primary" name='btn_orden' >Generar Orden</button>
+                            }
                         </form>
                     </div>
                 </Bounce>

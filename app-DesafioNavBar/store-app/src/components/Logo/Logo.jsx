@@ -1,4 +1,4 @@
-import logo from "../../logo_grido.jpg";
+import logo from "../../logo_grido.jpeg";
 
 
 const Logo=()=>{

@@ -52,9 +52,12 @@ th:nth-child(even),td:nth-child(even) {
     height: 5em;
     width: 5em;
 }
-.btn{
-    height: 2em;
+.btn_quitar:hover{
+    background-color: rgb(187, 28, 28);
+    
+
 }
 table{padding-bottom: 15em;}
+table button{margin-top: 0 auto;}
 
 
