@@ -52,13 +52,14 @@ const Cart=()=>{
         ord.add(orden)
         .then(idDoc =>(
                 alert(
-                `       ¡COMPRA FIANALIZADA EXITOSAMENTE!
+                `
+                ¡COMPRA FINALIZADA EXITOSAMENTE!
 
                 Tu Código de Orden es: "${idDoc.id}"
                 
                 Monto Abonado: $ ${calcularTotal()}
                 
-                Muchas Gracias por comprar
+                ¡Muchas Gracias por tu Compra!
                 `)))
                 .catch(err =>(
                     console.log(err)
