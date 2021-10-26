@@ -12,7 +12,7 @@ El proyecto tiene como objetivo, brindar solución a la gestión de pedidos de h
 ## Dependencias extras
 
 - **React Boostrap -versión-^2.0.0-beta.6**:Librería de componentes avanzados, habilitando su desarrollo de diseño necesario para aplicaciones con ReactJS.
--**React Reveal -versión-^1.2.2**:Es una biblioteca de animación de alto rendimiento para React. Tiene licencia del MIT, ocupa poco espacio y está escrito específicamente para React en ES6. Se puede usar para crear varios efectos de revelación geniales en los desplazamientos. 
+- **React Reveal -versión-^1.2.2**:Es una biblioteca de animación de alto rendimiento para React. Tiene licencia del MIT, ocupa poco espacio y está escrito específicamente para React en ES6. Se puede usar para crear varios efectos de revelación geniales en los desplazamientos. 
 - **Firebase -versión-^8.9.1**: Plataforma móvil de Google que te ayuda a desarrollar apps de alta calidad con rapidez sin preocuparnos de tener un BackEnd.
 - **React Router DOM -versión-^5.3.0**: Utilizado en el sistema de navegación entre páginas para que funcione como una SPA.
 
