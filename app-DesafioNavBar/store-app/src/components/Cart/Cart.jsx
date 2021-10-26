@@ -18,27 +18,19 @@ const Cart=()=>{
         telefono:'',
         mail:'',
         mail2:''
-    })
-    function validarMail(e){      
-        if(formData.mail === formData.mail2){
-            console.log('son iguales')
-        }else{
-            console.log('No son iguales')
-        }
-    }
+    })    
 
     function handleChange(e){
      setFormData({
         ...formData,[e.target.name]:e.target.value
         })
     }
-    
+
     function handleSubmit(e){
         e.preventDefault()
-        generarOrder()
-        
+        generarOrder()        
     }
-
+    
     const generarOrder=()=>{
         const db=getFirestore()
         const ord=db.collection('ordenes')
@@ -59,22 +51,27 @@ const Cart=()=>{
         
         ord.add(orden)
         .then(idDoc =>(
-            alert(`Orden: ${idDoc.id}
-            Generada con exito`)
-        ))
-        .catch(err =>(
-            console.log(err)
-        ))
-        .finally(() =>
-         setFormData({
-                nombre: '',
-                telefono: '',
-                mail: ''
-            }),
-            borrarCarrito()
-        )
-    }      
+                alert(
+                `       ¡COMPRA FIANALIZADA EXITOSAMENTE!
 
+                Tu Código de Orden es: "${idDoc.id}"
+                
+                Monto Abonado: $ ${calcularTotal()}
+                
+                Muchas Gracias por comprar
+                `)))
+                .catch(err =>(
+                    console.log(err)
+                    ))
+                .finally(() =>
+                    setFormData({
+                        nombre: '',
+                        telefono: '',
+                        mail: ''
+                    }),
+                    borrarCarrito()
+                )}      
+                
     return(
        <>            
            {cartList.length === 0 ?
@@ -131,21 +128,20 @@ const Cart=()=>{
                             <input type="text" required placeholder="Ingresar Nombre" name="nombre" value={FormData.nombre}/>
                             <input type="text" required placeholder="Ingresar Telefono" name="telefono" value={FormData.telefono} />
                             <input type="text" required placeholder="Ingresar Mail" name="mail" value={FormData.mail}/>
-                            <input type="text" required placeholder="Reingresar Mail" name="mail2" value={FormData.mail2} onBlur={validarMail()}/>
+                            <input type="text" required placeholder="Reingresar Mail" name="mail2" value={FormData.mail2}/>
                             <label className="fw-bold mt-3 text-primary">Importe a Pagar: ${calcularTotal()}</label>
                             {formData.mail !== formData.mail2 || formData.mail=='' ? 
                             <button className="orden btn btn-dark" disabled="true"  name='btn_orden' >Generar Orden</button>
                             :
-                            <button className="orden btn btn-primary" name='btn_orden' >Generar Orden</button>
+                            <button className="orden btn btn-primary" name='btn_orden'>Generar Orden</button>
                             }
                         </form>
                     </div>
                 </Bounce>
-            </div> 
-        </div> }          
-       </> 
-    
-    )
+            </div>
+        </div>}          
+    </>
+ )
 }
 
 export default Cart;

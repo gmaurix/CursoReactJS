@@ -1,7 +1,7 @@
-	# E-commerce project Store in ReactJS
+## E-commerce Project Store in ReactJS
 
 Proyecto desarrollado a lo largo del curso de [ReactJS](https://www.coderhouse.com/online/reactjs) de [Coderhouse](https://www.coderhouse.com).
-El proyecto tiene como objetivo, dar solución a la gestión de pedidos de helado, del canal comercial de venta mayorista, mediante el uso de la de la herramienta web desarrollada en este proyecto. Facilitando a los clientes realizar pedidos de Helado para revender en sus comercios.
+El proyecto tiene como objetivo, brindar solución a la gestión de pedidos de helado,(del canal comercial de venta mayorista), mediante el uso de la herramienta web desarrollada en este proyecto. Facilitando a los clientes realizar pedidos de Helado para reventa en sus comercios.
 
 - 8 semanas
 - 2 clases semanales
@@ -23,5 +23,5 @@ El proyecto tiene como objetivo, dar solución a la gestión de pedidos de helad
 git clone https://github.com/gmaurix/CursoReactJS.git
 cd CursoReactJS/app-DesafioNavBar/store-app
 npm install
-npm start
+npm run start
 ```
