@@ -88,10 +88,10 @@ const Cart=()=>{
                <Slide top>
                     <h2 className='p-cart fw-bold'>CARRITO DE COMPRAS</h2>
                </Slide>
-            <div className="contenedor" >                
+            <div className="contenedor col-sm-12 col-md-12 w-100" >                
             <div className="list-carrito" >
                 <Bounce left>
-                    <table className="mb-5">
+                    <table className="mb-5 carrito_listado col-md-12 col-sm-12">
                         <tr>
                             <th>Foto</th>
                             <th>Descripcion</th>
@@ -108,6 +108,7 @@ const Cart=()=>{
                                 <td>{cantidad} </td>
                                 <td>{producto.Precio} </td>
                                 <td>{producto.Precio * cantidad} </td>
+                                <td></td>
                                 <td><button className="btn btn-dark btn_quitar" onClick={()=>quitarProducto(producto)} ><FaRegTrashAlt/></button></td>                            
                             </tr>                        
                         )}             
@@ -117,7 +118,13 @@ const Cart=()=>{
                             <td></td>
                             <td className="fw-bold">Total</td>
                             <td className="fw-bold"> $ {calcularTotal()}</td>
-                            <td><button className="btn btn-dark btn_quitar" onClick={()=>borrarCarrito()}><FaRegTrashAlt/> Borrar Carrito</button></td>
+                            <td></td>
+                            <td>
+                                <button className="btn btn-dark btn_quitar w-100" onClick={()=>borrarCarrito()}><FaRegTrashAlt/> Borrar Carrito</button>
+                                <Link exact to="/">
+                                <button className='btn btn-primary w-100' >Seguir Comprando </button>
+                                </Link>
+                            </td>
                         </tr>
                     </table>             
                     </Bounce>   

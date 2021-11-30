@@ -28,19 +28,19 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 ?
                     <div>
                         <div>
-                            <button id='btnResta' className='btn-success sumres res' onClick={restar}>-</button>
+                            <button id='btnResta' className='btn-primary sumres res' onClick={restar}>-</button>
                             <span>{count}</span>
-                            <button id='btnSuma' className='btn-success sumres sum' onClick={sumar}>+</button>
+                            <button id='btnSuma' className='btn-primary sumres sum' onClick={sumar}>+</button>
+                           <button id='btnAdd' onClick={addCart} className='btn-primary addcart'>Add to Cart</button>
                         </div>
-                        <button id='btnAdd' onClick={addCart} className='btn-success addcart'>Add to Cart</button>
                     </div>
                 :
                     <div>
                         <Link exact to="/">
-                            <button id='btnAdd'  className='btn-primary addcart'>↤ Volver </button>
+                            <button id='btnAdd'  className='btn-primary addcart'>Seguir Comprando </button>
                         </Link>
                         <Link exact to="/cart">
-                            <button id='btnAdd'  className='btn-primary addcart'>CheckOut Compra</button>
+                            <button id='btnAdd'  className='btn-primary addcart'>Terminar Compra</button>
                         </Link>
 
                     </div>
