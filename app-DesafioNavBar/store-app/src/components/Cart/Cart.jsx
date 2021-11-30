@@ -138,7 +138,7 @@ const Cart=()=>{
                             <input type="text" required placeholder="Ingresar Mail" name="mail" value={FormData.mail}/>
                             <input type="text" required placeholder="Reingresar Mail" name="mail2" value={FormData.mail2}/>
                             <label className="fw-bold mt-3 text-primary">Importe a Pagar: ${calcularTotal()}</label>
-                            {formData.mail !== formData.mail2 || formData.mail=='' ? 
+                            {formData.mail !== formData.mail2 || formData.mail==='' ? 
                             <button className="orden btn btn-dark" disabled="true"  name='btn_orden' >Generar Orden</button>
                             :
                             <button className="orden btn btn-primary" name='btn_orden'>Generar Orden</button>
