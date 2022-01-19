@@ -6,7 +6,7 @@ El proyecto tiene como objetivo, brindar solución a la gestión de pedidos de h
 - 8 semanas
 - 2 clases semanales
 
-## Ver [DEMO](https://https://store-cde.netlify.app/)
+## Ver [DEMO](https://store-cde.netlify.app/)
 
 
 ## Dependencias extras
